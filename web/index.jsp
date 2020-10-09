@@ -17,6 +17,8 @@
                 
         <h1>Hello World!</h1>
         
+        <%@include file="_footer.jsp" %>
+        
         <script type="text/javascript" src="assets/jquery.min.js"></script>
         <script type="text/javascript" src="assets/jquery.mask.min.js"></script>
         <script type="text/javascript" src="assets/popper/popper.min.js"></script>
