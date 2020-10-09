@@ -13,11 +13,12 @@
         <title>Dev Web 2020.1</title>
     </head>
     <body>
-        
+        <%@include file="_header.jsp" %>
                 
         <h1>Hello World!</h1>
         
         <script type="text/javascript" src="assets/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.mask.min.js"></script>
         <script type="text/javascript" src="assets/popper/popper.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
     </body>
