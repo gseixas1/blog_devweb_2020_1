@@ -17,7 +17,7 @@
 
 <style>
     .footer {
-        height: 300px;
+        height: 30vh;
         color: white;
         padding: 100px;
     }

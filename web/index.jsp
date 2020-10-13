@@ -14,14 +14,45 @@
     </head>
     <body>
         <%@include file="_header.jsp" %>
+
+        <section class="login-section">
+            <form method="POST" action="Autenticacao" class="form-group w-25 login-form border border-secondary rounded p-2">
                 
-        <h1>Hello World!</h1>
-        
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" class="form-control" required/>
+                
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha" class="form-control" required/>
+                
+                <button type="submit" class="btn btn-dark mt-2">Entrar</button>
+            </form>
+        </section>
+
         <%@include file="_footer.jsp" %>
+        
+        <style>
+            .login-section {
+                width: 100%;
+                height: 70vh;
+                padding-top: 60px;
+            }
+            .login-form {
+                margin: 15vh auto auto auto;
+            }
+        </style>
+        
         
         <script type="text/javascript" src="assets/jquery.min.js"></script>
         <script type="text/javascript" src="assets/jquery.mask.min.js"></script>
         <script type="text/javascript" src="assets/popper/popper.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
+
+        <%-- TODO: fazer mascara do campo de CPF --%>
+        <script>
+            $(document).ready(function(){
+               $('.cpf').mask('000.000.000-00', { reverse: true });
+            });
+        </script>
+
     </body>
 </html>
