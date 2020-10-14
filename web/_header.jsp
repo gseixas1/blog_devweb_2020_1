@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Início</a>
+                    <a class="nav-link" href="index.jsp">Início</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Registrar</a>
+                    <a class="nav-link" href="registrar.jsp">Registrar</a>
                 </li>
             </ul>
         </div>

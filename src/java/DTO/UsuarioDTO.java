@@ -14,6 +14,7 @@ public class UsuarioDTO {
     private String nome;
     private String cpf;
     private String senha;
+    private String email;
     private String grauDeAcesso;
 
     public String getNome() {
@@ -38,6 +39,14 @@ public class UsuarioDTO {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getGrauDeAcesso() {
