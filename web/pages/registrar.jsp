@@ -19,7 +19,7 @@
             <form method="POST" action="Registro" class="form-group w-25 login-form border border-secondary rounded p-2">
                 
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF" class="form-control" required/>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" class="cpf form-control" required/>
                 
                 <label for="nome">Nome Completo</label>
                 <input type="text" name="nome" id="nome" placeholder="Nome" class="form-control" required/>
@@ -58,6 +58,10 @@
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
         
         <script>
+            $(document).ready(function(){
+               $('.cpf').mask('000.000.000-00', { reverse: true });
+            });
+            
             var senha = document.getElementById("senha") , confirmacao_senha = document.getElementById("confirmacao_senha");
 
             function validatePassword(){

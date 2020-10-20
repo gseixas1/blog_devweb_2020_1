@@ -16,7 +16,7 @@
                     <a class="nav-link" href="#">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registrar.jsp">Registrar</a>
+                    <a class="nav-link" href="pages/registrar.jsp">Registrar</a>
                 </li>
             </ul>
         </div>
