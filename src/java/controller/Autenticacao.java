@@ -31,11 +31,11 @@ public class Autenticacao extends HttpServlet {
         if (!cpf.isEmpty() && !senha.isEmpty()) {
             HttpSession session = request.getSession();
             session.setAttribute("usuario", cpf); // TODO: guardar uma instancia do objeto Usuario na sessão
-            RequestDispatcher resposta = request.getRequestDispatcher("/pages/blog.jsp");
+            RequestDispatcher resposta = request.getRequestDispatcher("pages/blog.jsp");
             resposta.forward(request, response);
         } else {
             request.setAttribute("erro", "Usuário não encontrado");
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
             rd.forward(request, response);
         }
     }
