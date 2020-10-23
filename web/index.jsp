@@ -13,7 +13,7 @@
         <title>Dev Web 2020.1</title>
     </head>
     <body>
-        <%@include file="_header.jsp" %>
+        <%@include file="_navbar.jsp" %>
         
         <%-- TODO: session != null && session.getAttribute("usuario") != null ? se sim, direcionar para pagina do blog --%>
         <% if (session != null && session.getAttribute("usuario") != null) { %> <jsp:forward page="pages/blog.jsp" /> <% } %>

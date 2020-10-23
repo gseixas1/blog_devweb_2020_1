@@ -19,7 +19,24 @@
                     <a class="nav-link" href="pages/registrar.jsp">Registrar</a>
                 </li>
                 <%-- TODO: Se usuario != null, adicionar link para postagens --%>
-                <%-- TODO: Se usuario == admin, adicionar link para aprovar as postagens --%>
+                <% if (session.getAttribute("usuario") != null) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/novo_post.jsp">Novo Post</a>
+                    </li>
+                <% } %>
+                
+                <%-- TODO: Checar se usuario tem papel ADMIN --%>
+                <% if (session.getAttribute("usuario") != null) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/admin_area.jsp">Aprovar Posts</a>
+                    </li>
+                <% } %>
+                <%-- TODO: Se usuario != null, adicionar link para fazer logout --%>
+                <% if (session.getAttribute("usuario") != null) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Logout">Logout</a>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </nav>
