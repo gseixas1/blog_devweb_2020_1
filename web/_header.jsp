@@ -18,6 +18,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="pages/registrar.jsp">Registrar</a>
                 </li>
+                <%-- TODO: Se usuario != null, adicionar link para postagens --%>
+                <%-- TODO: Se usuario == admin, adicionar link para aprovar as postagens --%>
             </ul>
         </div>
     </nav>

@@ -4,7 +4,7 @@
     Author     : pedro
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="DAO.Usuario"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,11 +12,14 @@
         <title>DevWeb</title>
     </head>
     <body>
-        <h1>TESTE</h1>
+        <%-- TODO: Checar se usuário esta logado --%>
         
+        <%-- TODO: Listar postagens --%>
         <script type="text/javascript" src="assets/jquery.min.js"></script>
         <script type="text/javascript" src="assets/jquery.mask.min.js"></script>
         <script type="text/javascript" src="assets/popper/popper.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
+        
+        
     </body>
 </html>

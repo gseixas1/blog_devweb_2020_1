@@ -14,7 +14,8 @@
     </head>
     <body>
         <%@include file="_header.jsp" %>
-
+        
+        <%-- TODO: checar se usuário já logou, se sim, direcionar para pagina do blog --%>
         <section class="login-section">
             <form method="POST" action="Autenticacao" class="form-group w-25 login-form border border-secondary rounded p-2">
                 
@@ -47,7 +48,6 @@
         <script type="text/javascript" src="assets/popper/popper.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
 
-        <%-- TODO: fazer mascara do campo de CPF --%>
         <script>
             $(document).ready(function(){
                $('.cpf').mask('000.000.000-00', { reverse: true });
