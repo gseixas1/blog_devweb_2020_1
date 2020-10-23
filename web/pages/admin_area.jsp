@@ -9,9 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>DevWeb</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%-- TODO: session == null || session.getAttribute("usuario") == null ? se sim, direcionar para pagina de login --%>
+        <% if (session == null || session.getAttribute("usuario") == null) { %> <jsp:forward page="index.jsp" /> <% } %>
+        
+        
+        <h1>Area de Admin</h1>
     </body>
 </html>

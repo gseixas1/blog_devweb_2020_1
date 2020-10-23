@@ -13,6 +13,8 @@
     </head>
     <body>
         <%-- TODO: Checar se usuário esta logado --%>
+        <% if (session == null || session.getAttribute("usuario") == null) { %> <jsp:forward page="index.jsp" /> <% } %>
+        
         <h1>BLOG</h1>
         <%-- TODO: Listar postagens --%>
         <script type="text/javascript" src="assets/jquery.min.js"></script>
