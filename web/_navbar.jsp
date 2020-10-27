@@ -15,9 +15,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sobre</a>
                 </li>
+                <%-- TODO: Se usuario == null, adicionar link para se registrar --%>
+                <% if (session.getAttribute("usuario") == null) { %>
                 <li class="nav-item">
                     <a class="nav-link" href="pages/registrar.jsp">Registrar</a>
                 </li>
+                <% } %>
                 <%-- TODO: Se usuario != null, adicionar link para postagens --%>
                 <% if (session.getAttribute("usuario") != null) { %>
                     <li class="nav-item">
@@ -28,7 +31,7 @@
                 <%-- TODO: Checar se usuario tem papel ADMIN --%>
                 <% if (session.getAttribute("usuario") != null) { %>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/admin_area.jsp">Aprovar Posts</a>
+                        <a class="nav-link" href="pages/admin_area.jsp">Admin</a>
                     </li>
                 <% } %>
                 <%-- TODO: Se usuario != null, adicionar link para fazer logout --%>
