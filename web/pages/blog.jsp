@@ -17,21 +17,18 @@
         <% if (session == null || session.getAttribute("usuario") == null) { %> <jsp:forward page="index.jsp" /> <% } %>
         <%@include file="../_navbar.jsp" %>
 
-  <!-- Page Content -->
   <div class="container">
 
     <div class="row">
 
-      <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <!-- Blog Post -->
         <div class="card mb-4">
           <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Título do post</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Comentários &rarr;</a>
+            <a href="pages/post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Enviado dia 27 de outubro por
@@ -39,13 +36,12 @@
           </div>
         </div>
 
-        <!-- Blog Post -->
         <div class="card mb-4">
           <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Título do post</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Comentários &rarr;</a>
+            <a href="pages/post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Enviado dia 20 de outubro por
@@ -53,13 +49,12 @@
           </div>
         </div>
 
-        <!-- Blog Post -->
         <div class="card mb-4">
           <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Título do post</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Comentários &rarr;</a>
+            <a href="pages/post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Enviado dia 20 de outubro por
@@ -67,7 +62,6 @@
           </div>
         </div>
 
-        <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
           <li class="page-item">
             <a class="page-link" href="#">&larr; Antigas</a>
@@ -79,10 +73,8 @@
 
       </div>
 
-      <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
      
-        <!-- Categories Widget -->
         <div class="card my-4">
           <h5 class="card-header">Categorias</h5>
           <div class="card-body">
@@ -120,7 +112,6 @@
       </div>
 
     </div>
-    <!-- /.row -->
 
   </div>
         
