@@ -58,8 +58,8 @@
                 <p>Categoria</p>
                 <p>Descrição</p>
                 <div>
-                    <button class="btn btn-danger">Recusar</button>
-                    <button class="btn btn-primary">Aceitar</button>
+                    <button onclick="" class="btn btn-danger">Recusar</button>
+                    <button onclick="" class="btn btn-primary">Aceitar</button>
                 </div>
             </div>
         </div>
