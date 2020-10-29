@@ -9,13 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
         <title>DevWeb</title>
     </head>
     <body>
         <%-- Checa se usuário esta logado --%>
         <% if (session == null || session.getAttribute("usuario") == null) { %> <jsp:forward page="index.jsp" /> <% } %>
-        <%@include file="../_navbar.jsp" %>
+        <%@include file="_navbar.jsp" %>
         <%-- --%>
         
         <div class="wrapper">
@@ -55,7 +55,7 @@
             </div>
         </div>
         
-        <%@include file="../_footer.jsp" %>
+        <%@include file="_footer.jsp" %>
         <style>
             .wrapper {
                 height: 70vh;

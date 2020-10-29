@@ -15,7 +15,7 @@
     <body>
         <%-- TODO: Checar se usuário esta logado --%>
         <% if (session == null || session.getAttribute("usuario") == null) { %> <jsp:forward page="index.jsp" /> <% } %>
-        <%@include file="../_navbar.jsp" %>
+        <%@include file="_navbar.jsp" %>
 
   <div class="container">
 
@@ -28,7 +28,7 @@
           <div class="card-body">
             <h2 class="card-title">Título do post</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="pages/post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
+            <a href="post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Enviado dia 27 de outubro por
@@ -41,7 +41,7 @@
           <div class="card-body">
             <h2 class="card-title">Título do post</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="pages/post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
+            <a href="post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Enviado dia 20 de outubro por
@@ -54,7 +54,7 @@
           <div class="card-body">
             <h2 class="card-title">Título do post</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="pages/post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
+            <a href="post.jsp" class="btn btn-primary">Ler mais &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Enviado dia 20 de outubro por
@@ -117,7 +117,7 @@
         
         
         
-        <%@include file="../_footer.jsp" %>
+        <%@include file="_footer.jsp" %>
         
         <style>
             .container {

@@ -16,7 +16,7 @@
         <%@include file="_navbar.jsp" %>
         
         <%-- TODO: session != null && session.getAttribute("usuario") != null ? se sim, direcionar para pagina do blog --%>
-        <% if (session != null && session.getAttribute("usuario") != null) { %> <jsp:forward page="pages/blog.jsp" /> <% } %>
+        <% if (session != null && session.getAttribute("usuario") != null) { %> <jsp:forward page="blog.jsp" /> <% } %>
         
         <section class="login-section">
             <form method="POST" action="Autenticacao" class="form-group w-25 login-form border border-secondary rounded p-2">

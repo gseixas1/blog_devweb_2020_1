@@ -13,7 +13,7 @@
         <title>DevWeb</title>
     </head>
     <body>
-        <%@include file="../_navbar.jsp" %>
+        <%@include file="_navbar.jsp" %>
 
         <section class="login-section">
             <form method="POST" action="Registro" class="form-group w-25 login-form border border-secondary rounded p-2">
@@ -38,7 +38,7 @@
             </form>
         </section>
 
-        <%@include file="../_footer.jsp" %>
+        <%@include file="_footer.jsp" %>
         
         <style>
             .login-section {

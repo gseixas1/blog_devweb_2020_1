@@ -9,11 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
         <title>DevWeb</title>
     </head>
     <body>
-        <%@include file="../_navbar.jsp" %>
+        <%@include file="_navbar.jsp" %>
         <%-- TODO: session == null || session.getAttribute("usuario") == null ? se sim, direcionar para pagina de login --%>
         <% if (session == null || session.getAttribute("usuario") == null) { %> <jsp:forward page="index.jsp" /> <% } %>
         
@@ -64,7 +64,7 @@
             </div>
         </div>
         
-        
+        <%@include file="_footer.jsp" %>
         
         <style>
             .titulo {

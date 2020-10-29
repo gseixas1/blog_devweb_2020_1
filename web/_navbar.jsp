@@ -13,25 +13,25 @@
                     <a class="nav-link" href="index.jsp">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
+                    <a class="nav-link" href="sobre.jsp">Sobre</a>
                 </li>
                 <%-- TODO: Se usuario == null, adicionar link para se registrar --%>
                 <% if (session.getAttribute("usuario") == null) { %>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/registrar.jsp">Registrar</a>
+                    <a class="nav-link" href="registrar.jsp">Registrar</a>
                 </li>
                 <% } %>
                 <%-- TODO: Se usuario != null, adicionar link para postagens --%>
                 <% if (session.getAttribute("usuario") != null) { %>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/novo_post.jsp">Novo Post</a>
+                        <a class="nav-link" href="novo_post.jsp">Novo Post</a>
                     </li>
                 <% } %>
                 
                 <%-- TODO: Checar se usuario tem papel ADMIN --%>
                 <% if (session.getAttribute("usuario") != null) { %>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/admin_area.jsp">Admin</a>
+                        <a class="nav-link" href="admin_area.jsp">Admin</a>
                     </li>
                 <% } %>
                 <%-- TODO: Se usuario != null, adicionar link para fazer logout --%>
