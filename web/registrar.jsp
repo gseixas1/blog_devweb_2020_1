@@ -16,7 +16,7 @@
         <%@include file="_navbar.jsp" %>
 
         <section class="login-section">
-            <form method="POST" action="Registro" class="form-group w-25 login-form border border-secondary rounded p-2">
+            <form method="POST" action="Registrar" class="form-group w-25 login-form border border-secondary rounded p-2">
                 
                 <label for="cpf">CPF</label>
                 <input type="text" name="cpf" id="cpf" placeholder="CPF" class="cpf form-control" required/>
@@ -33,6 +33,12 @@
                 <label for="confirmacao_senha">Confirme a senha</label>
                 <input type="password" name="confirmacao_senha" id="confirmacao_senha" placeholder="Confirme a senha" class="form-control" required/>
                
+                <label for="papel">Papel</label>
+                <select name="papel" id="papel" class="form-control" required>
+                    <option value="admin">Admin</option>
+                    <option value="autor" selected>Autor</option>
+                    <option value="comentarista">Comentarista</option>
+                </select>
                 
                 <button type="submit" class="btn btn-dark mt-2">Registrar</button>
             </form>
@@ -45,6 +51,7 @@
                 width: 100%;
                 height: 70vh;
                 padding-top: 60px;
+                padding: 10px;
             }
             .login-form {
                 margin: 15vh auto auto auto;
