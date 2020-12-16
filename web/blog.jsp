@@ -4,7 +4,7 @@
     Author     : pedro
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8" import="DAO.Usuario"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="DAO.UsuarioDAO"%>
 <!DOCTYPE html>
 <html>
     <head>

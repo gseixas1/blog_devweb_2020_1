@@ -5,15 +5,10 @@
  */
 package controller;
 
-import DAO.Usuario;
+import DAO.RegistrarDAO;
+import DTO.UsuarioDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,24 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Registrar", urlPatterns = {"/Registrar"})
 public class Registrar extends HttpServlet {
-    Connection conn = null;
-    
-    private enum PAPEL {
-        admin,
-        autor,
-        comentarista
-    }
-    public void init() throws ServletException {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/blog", "root", "");
-        } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-    }
-    
+        
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -52,49 +30,27 @@ public class Registrar extends HttpServlet {
         String cpf   = request.getParameter("cpf");
 	String senha = request.getParameter("senha");
 	String email = request.getParameter("email");
-        String papel = request.getParameter("papel");
+        String papelStr = request.getParameter("papel");
+        Integer papelInt = papelStr == "admin" ? 0 : (papelStr == "autor" ? 1 : 2);
         
-        try {
-            if(!cpf.isEmpty() && !senha.isEmpty() && !nome.isEmpty() && !email.isEmpty()) {
-                
-                if(papel.equals(PAPEL.admin.toString())) {
-                    papel = "0";
-                } else if(papel.equals(PAPEL.autor.toString())) {
-                    papel = "1";
-                } else {
-                    papel = "2";
-                }
-                
-                PreparedStatement sql = 
-                        conn.prepareStatement("insert into usuario(email, senha, nome, cpf, papel) values(?, ?, ?, ?, ?)");
-                sql.setString(1, email);
-                sql.setString(2, senha);
-                sql.setString(3, nome);
-                sql.setString(4, cpf);
-                sql.setString(5, papel);
-                sql.executeUpdate();
-
+        if(!cpf.isEmpty() && !senha.isEmpty() && !nome.isEmpty() && !email.isEmpty()) {
+            
+            RegistrarDAO registrar = new RegistrarDAO(cpf, senha, nome, email, papelInt);
+            
+            if(registrar.gravarUsuario()) {
                 RequestDispatcher rd = request.getRequestDispatcher("./index.jsp");
                 rd.forward(request, response);
-                System.out.println("sucesso");
             } else {
-                System.out.println("erro");
-                RequestDispatcher rd = request.getRequestDispatcher("./sobre.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("./registrar.jsp");
                 rd.forward(request, response);
             }
-        } catch (SQLException ex) {
-            PrintWriter out = response.getWriter();
-            out.println("<h1>erro de execusao SQL</h1>");
+            
+        } else {
+            RequestDispatcher rd = request.getRequestDispatcher("./sobre.jsp");
+            rd.forward(request, response);
         }
+        
     }
-    
-    @Override
-    public void destroy() {
-        try {
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println("não foi possível fechar a conexão com o banco!");
-        }
-    }
+
 }
 

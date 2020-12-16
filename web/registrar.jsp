@@ -35,9 +35,9 @@
                
                 <label for="papel">Papel</label>
                 <select name="papel" id="papel" class="form-control" required>
-                    <option value="admin">Admin</option>
-                    <option value="autor" selected>Autor</option>
-                    <option value="comentarista">Comentarista</option>
+                    <option value="0">Admin</option>
+                    <option value="1" selected>Autor</option>
+                    <option value="2">Comentarista</option>
                 </select>
                 
                 <button type="submit" class="btn btn-dark mt-2">Registrar</button>

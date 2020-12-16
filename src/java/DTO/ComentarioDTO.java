@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DAO;
+package DTO;
 
 /**
  *
  * @author pedro
  */
-public class Comentario {
+public class ComentarioDTO {
  
     private Integer id;
     private Integer id_artigo;
