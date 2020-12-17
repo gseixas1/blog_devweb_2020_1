@@ -13,10 +13,23 @@
         <title>Dev Web 2020.1</title>
     </head>
     <body>
-        <%@include file="_navbar.jsp" %>
+        <header class="navbar-header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#">DevWeb</a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="registrar.jsp">Registrar</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
         
-        <%-- TODO: session != null && session.getAttribute("usuario") != null ? se sim, direcionar para pagina do blog --%>
-        <% if (session != null && session.getAttribute("usuario") != null) { %> <jsp:forward page="blog.jsp" /> <% } %>
         
         <section class="login-section">
             <form method="POST" action="Autenticacao" class="form-group w-25 login-form border border-secondary rounded p-2">

@@ -68,14 +68,7 @@ public class UsuarioDTO {
     }
 
     public void setPapel(Integer papel) {
-        switch(papel) {
-            case 0:
-                this.papel = Papel.admin.ordinal();
-            case 1:
-                this.papel = Papel.autor.ordinal();
-            case 2:
-                this.papel = Papel.comentarista.ordinal();
-        }
+        this.papel = papel;
     }
 
     public Boolean getCadastro_aprovado() {

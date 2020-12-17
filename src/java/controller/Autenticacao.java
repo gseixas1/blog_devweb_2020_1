@@ -30,13 +30,15 @@ public class Autenticacao extends HttpServlet {
 
             if(usuarioDTO != null) {
                 HttpSession session = request.getSession();
-                session.setAttribute("usuario", usuarioDTO);
+                session.setAttribute("usuario", usuarioDTO.getNome());
+                session.setAttribute("cpf", usuarioDTO.getCpf());
+                session.setAttribute("email", usuarioDTO.getEmail());
+                session.setAttribute("papel", usuarioDTO.getPapel());
                 
                 RequestDispatcher resposta = request.getRequestDispatcher("blog.jsp");
                 resposta.forward(request, response);
             } else {
-                RequestDispatcher resposta = request.getRequestDispatcher("index.jsp");
-                resposta.forward(request, response);
+                response.sendRedirect("index.jsp");
             }
         }
     }

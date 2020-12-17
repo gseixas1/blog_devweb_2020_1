@@ -42,20 +42,19 @@ public class UsuarioDAO extends HttpServlet {
             
             ResultSet rs = ps.executeQuery();
             
-            System.out.println(rs);
-            
             if(rs.next()) {
                 usuario.setId(rs.getInt("id"));
                 usuario.setPapel(rs.getInt("papel"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setNome(rs.getString("nome"));
                 usuario.setCadastro_aprovado(rs.getInt("cadastro_aprovado"));
+                return usuario;
             }
 
         } catch( SQLException e ) {
             System.out.println("Erro de SQL: " + e.getMessage());
         }
-        return usuario;
+        return null;
     }
 
 }
