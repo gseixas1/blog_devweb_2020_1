@@ -30,6 +30,7 @@ public class Autenticacao extends HttpServlet {
 
             if(usuarioDTO != null) {
                 HttpSession session = request.getSession();
+                session.setAttribute("id", usuarioDTO.getId());
                 session.setAttribute("usuario", usuarioDTO.getNome());
                 session.setAttribute("cpf", usuarioDTO.getCpf());
                 session.setAttribute("email", usuarioDTO.getEmail());

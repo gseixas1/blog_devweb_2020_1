@@ -9,22 +9,22 @@ package DTO;
  *
  * @author pedro
  */
-public class ArtigoDTO {
+public class PostagemDTO {
 
-    private Integer id;
     private Integer id_usuario;
-    private Integer id_categoria;
+    private String categoria;
     private String titulo;
     private String conteudo;
     private Boolean liberar; // Liberado pelo usuario
     private Boolean aprovado; // Aprovado pelo admin
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public PostagemDTO(Integer id_usuario, String categoria, String titulo, String conteudo, Boolean liberar, Boolean aprovado) {
+        this.id_usuario = id_usuario;
+        this.categoria = categoria;
+        this.titulo = titulo;
+        this.conteudo = conteudo;
+        this.liberar = liberar;
+        this.aprovado = aprovado;
     }
 
     public Integer getId_usuario() {
@@ -35,12 +35,12 @@ public class ArtigoDTO {
         this.id_usuario = id_usuario;
     }
 
-    public Integer getId_categoria() {
-        return id_categoria;
+    public String getId_categoria() {
+        return categoria;
     }
 
-    public void setId_categoria(Integer id_categoria) {
-        this.id_categoria = id_categoria;
+    public void setId_categoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public String getTitulo() {

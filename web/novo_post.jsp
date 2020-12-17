@@ -25,7 +25,8 @@
             
             <div class="bootstrap-form">
                 <div class="container">
-                    <form>
+                    <form method="POST" action="ProcessaNovaPostagem">
+                        <input type="hidden" class="form-control" name="id_usuario" value="<%= session.getAttribute("id") %>">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-right" for="titulo">Titulo</label>
                             <div class="col-sm-10">
@@ -42,7 +43,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-right" for="descricao">Descricao</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="descricao" rows="5" placeholder="Corpo do artigo"></textarea>
+                                <textarea class="form-control" id="conteudo" rows="5" placeholder="Corpo do artigo"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">

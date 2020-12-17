@@ -26,7 +26,7 @@ public class UsuarioDAO extends HttpServlet {
             conexao = Conexao.criaConexao();
         }
         catch( Exception e ) {
-            System.out.println("Erro criação de conexao DAO");
+            System.out.println("Erro criação de conexao Usuario DAO");
             System.out.println(e);
         }
     }

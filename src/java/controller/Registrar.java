@@ -46,7 +46,7 @@ public class Registrar extends HttpServlet {
             }
             
         } else {
-            RequestDispatcher rd = request.getRequestDispatcher("./sobre.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("./registrar.jsp");
             rd.forward(request, response);
         }
         
